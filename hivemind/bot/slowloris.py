@@ -60,6 +60,13 @@ parser.add_argument(
     type=int,
     help="Time to sleep between each header sent.",
 )
+parser.add_argument(
+    "--duration",
+    dest="duration",
+    default=10,
+    type=int,
+    help="Duration of attack.",
+)
 parser.set_defaults(verbose=False)
 parser.set_defaults(randuseragent=False)
 parser.set_defaults(useproxy=False)
@@ -190,7 +197,7 @@ def main():
         list_of_sockets.append(s)
 
     start = time.time()
-    PERIOD_OF_TIME = int(input('how long should it go for: '))
+    #PERIOD_OF_TIME = int(input('how long should it go for: '))
 
     while True:
         try:
@@ -219,7 +226,7 @@ def main():
         except (KeyboardInterrupt, SystemExit):
             logging.info("Stopping Slowloris")
             break
-        if time.time() > start + PERIOD_OF_TIME: 
+        if time.time() > start + args.duration: 
             break
 
 
