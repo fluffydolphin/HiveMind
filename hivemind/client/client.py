@@ -38,11 +38,13 @@ while True:
     to_send = f"{to_send}"
     if '!help!' in to_send:
         print("""
-!help!               displays this
+!help!               Shows you this
 
-!connected!          tells you what bots are connected
+!connected!          Shows you how many and which bots are connected'
 
-type anything to use HiveMind
+!slowloris!          Shows you the help command for Slowloris
+
+Type anything to use HiveMind
 """)
     if '!slowloris!' in to_send:
         print("""
