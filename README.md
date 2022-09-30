@@ -35,7 +35,7 @@ If you want to clone using git, here's how you do it.
    ```js
    cd bot
    ```
-3. Run command for either server, client, bot
+3. Run command for either server, client or bot
    ```js
    python3 server
    ```
