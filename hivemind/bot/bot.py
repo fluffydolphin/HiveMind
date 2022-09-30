@@ -14,7 +14,8 @@ s.connect((SERVER_HOST, SERVER_PORT))
 print("[+] Connected.")
 
 
-name = input("What bot number is this?: ")
+bot = "bot-"
+name = input(f"What bot number is this?: {bot}")
 
 
 def listen_for_messages():
