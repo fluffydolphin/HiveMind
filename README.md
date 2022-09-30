@@ -86,4 +86,4 @@ arguments. In order to get an up-to-date help document, just run
 * --sleeptime
 * * Time to sleep between each header sent
 * --duration
-* * Time you want it to run for (not consistent can differ by about 2 or 3 attacks)
+* * Time you want it to run for (not consistent can differ by about 2 or 3 attacks and if this argument is not added then it will go untill you go to all bots and control + c)
