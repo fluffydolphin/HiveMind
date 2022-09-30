@@ -61,7 +61,7 @@ That's all it takes to install and run HiveMind.
 * !connected!
 * * Shows you how many and which bots are connected
 * !slowloris!
-** Show you the help command for Slowloris https://github.com/fluffydolphin/HiveMind/blob/master/README.md#configuration-options-for-slowloris
+* * Show you the help command for Slowloris https://github.com/fluffydolphin/HiveMind/blob/master/README.md#configuration-options-for-slowloris
 
 * When you run bot.py it will ask you what number bot you want this to be eg 1, 10 or 12 and the full bot name will be bot- the number you selected eg bot-2, bot-8 or bot-17. 
 
