@@ -32,23 +32,23 @@ Cloning using git.
    ```
    
 2. Cd into server, client or bot
-   ```js
+   ```sh
    cd server
    ```
-   ```js
+   ```sh
    cd client
    ```
-   ```js
+   ```sh
    cd bot
    ```
 3. Run command for either server, client or bot
-   ```js
+   ```sh
    python3 server
    ```
-   ```js
+   ```sh
    python3 client
    ```
-   ```js
+   ```sh
    python3 bot
    ```
   
