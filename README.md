@@ -12,7 +12,7 @@ HiveMind is basically a bot net using sockets in python that can run pretty much
 
 How to install git for cloning
 
-1. Clone the repo
+1. Install git
    ```sh
    sudo apt install git
    ```
