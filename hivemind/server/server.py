@@ -15,7 +15,7 @@ s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 s.bind((HOST, PORT))
 s.listen(5)
 print(f"[*] Listening as {HOST}:{PORT}")
-
+separator_token = "<SEP>"
 
 name = "server"
 
