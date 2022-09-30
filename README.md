@@ -5,7 +5,7 @@ HiveMind is basically a bot net using sockets in python that can run pretty much
 
 1. The server binds sockets together so that the client and bots can connect.
 2. After the server is up you connect how ever many bots you want.
-3. Then you can connact as a client with the password (default 1212 and is just expsed in text) and send cli commands to the bot simultaneously
+3. Then you can connact as a client with the password (default 1212 and is just expsed in text) and send cli commands to the bots simultaneously
 4. There is also a slightly modified version of Slowloris (credit to the contributors at https://github.com/gkbrk/slowloris) so you can run a DDOS attack (educational purposes), but that's just an example you can pretty much put anything you want in there as long as you can run it in cli.
 
 ## How to install and run?
