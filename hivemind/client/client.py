@@ -20,7 +20,7 @@ client_color = random.choice(colors)
 # server's IP address
 # if the server is not on this machine, 
 # put the private (network) IP address (e.g 192.168.1.2)
-SERVER_HOST = "192.168.3.10"
+SERVER_HOST = "192.168.3.49"
 SERVER_PORT = 420 # server's port
 separator_token = "<SEP>" # we will use this to separate the client name & message
 
@@ -62,7 +62,15 @@ while True:
     date_now = datetime.now().strftime('%Y-%m-%d %H:%M:%S') 
     to_send = f"{to_send}"
     # finally, send the message
-    s.send(to_send.encode())
+    if '!help!' in to_send:
+        print("""
+!help!               displays this
+
+!connected!          tells you what bots are connected
+
+type anything to use HiveMind
+""")
+    else: s.send(to_send.encode())
 
 # close the socket
 s.close()

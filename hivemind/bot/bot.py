@@ -41,7 +41,7 @@ name = input("Enter your name: ")
 def listen_for_messages():
     while True:
         message = s.recv(1024).decode()
-        if "!!" in message:
+        if "!connected!" in message:
             connected_bots = f"{name}: connected \n"
             s.send(connected_bots.encode())
         else:
