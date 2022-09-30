@@ -42,7 +42,7 @@ Cloning using git.
    cd bot
    ```
 3. Run command for either server, client or bot
-   ```python
+   ```sh
    python3 server
    ```
    ```sh
