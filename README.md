@@ -25,6 +25,12 @@ Cloning using git.
    ```sh
    git clone https://github.com/fluffydolphin/HiveMind.git
    ```
+   
+2. Cd into HiveMind
+   ```sh
+   cd HiveMind
+   ```
+   
 2. Cd into server, client or bot
    ```js
    cd server
