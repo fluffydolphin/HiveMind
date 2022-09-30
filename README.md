@@ -53,7 +53,7 @@ That's all it takes to install and run HiveMind.
 * !help!
 * * Shows you this
 * !connected!
-* * Shows you how many and which bot are connected
+* * Shows you how many and which bots are connected
 
 * When you run bot.py it will ask you what number bot you want this to be eg 1, 10 or 12 and the full bot name will be bot-the number you selected. 
 
