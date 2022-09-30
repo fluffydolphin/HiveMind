@@ -19,7 +19,7 @@ How to install git for cloning
 
 
 
-If you want to clone using git, here's how you do it.
+Cloning using git.
 
 1. Clone the repo
    ```sh
