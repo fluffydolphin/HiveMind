@@ -14,8 +14,7 @@ s.connect((SERVER_HOST, SERVER_PORT))
 print("[+] Connected.")
 
 
-bot = "bot-"
-name = input(f"What bot number is this?: {bot}")
+bot_number = input(f"What bot number is this?: ")
 
 
 def listen_for_messages():
@@ -38,7 +37,7 @@ while True:
     to_send =  input()
     if to_send.lower() == 'q':
         break
-    to_send = f"{name}: {to_send}"
+    to_send = f"bot-{bot_number}: {to_send}"
     s.send(to_send.encode())
 
 
