@@ -10,7 +10,7 @@ import json
 # server's IP address
 HOST = "0.0.0.0"
 PORT = 420 # port we want to use
-SERVER_HOST = "192.168.3.10"
+SERVER_HOST = "192.168.3.49"
 SERVER_PORT = 420 # port we want to use
 separator_token = "<SEP>" # we will use this to separate the client name & message
 
