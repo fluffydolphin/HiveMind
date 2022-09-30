@@ -13,6 +13,8 @@ s.connect((SERVER_HOST, SERVER_PORT))
 print("[+] Connected.")
 
 
+password = input('Password: ')
+    
 
 def listen_for_messages():
     while True:
@@ -27,6 +29,9 @@ t.start()
 
 
 while True:
+    if password != 'Hoey4639!':
+        print('Password is incorrect, restart and try again')
+        break
     to_send =  input()
     if to_send.lower() == 'q':
         break

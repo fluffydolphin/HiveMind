@@ -189,6 +189,9 @@ def main():
             break
         list_of_sockets.append(s)
 
+    start = time.time()
+    PERIOD_OF_TIME = int(input('how long should it go for: '))
+
     while True:
         try:
             logging.info(
@@ -215,6 +218,8 @@ def main():
 
         except (KeyboardInterrupt, SystemExit):
             logging.info("Stopping Slowloris")
+            break
+        if time.time() > start + PERIOD_OF_TIME: 
             break
 
 
