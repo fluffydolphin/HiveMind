@@ -82,9 +82,6 @@ if not args.host:
     sys.exit(1)
 
 if args.useproxy:
-    # Tries to import to external "socks" library
-    # and monkey patches socket.socket to connect over
-    # the proxy by default
     try:
         import socks
 
@@ -196,7 +193,6 @@ def main():
         list_of_sockets.append(s)
 
     start = time.time()
-    #PERIOD_OF_TIME = int(input('how long should it go for: '))
 
     while True:
         try:
