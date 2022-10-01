@@ -1,20 +1,33 @@
 import socket
 from threading import Thread
 import random
+import argparse
 
 
-HOST = "0.0.0.0"
-PORT = 420
-SERVER_HOST = "192.168.3.49"
-SERVER_PORT = 420
+parser = argparse.ArgumentParser(
+    description="HiveMind, python bot net using sockets"
+)
+
+parser.add_argument(
+    "-p", "--port", default=5000, help="Port of the Server", type=int
+)
+
+
+args = parser.parse_args()
+host =  "0.0.0.0"
+
+
+if len(sys.argv) <= 1:
+    parser.print_help()
+    sys.exit(1)
 
 
 client_sockets = set()
 s = socket.socket()
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-s.bind((HOST, PORT))
+s.bind((host, args.port))
 s.listen(5)
-print(f"[*] Listening as {HOST}:{PORT}")
+print(f"[*] Listening as {host}:{args.port}")
 separator_token = "<SEP>"
 
 name = "server"
@@ -34,8 +47,8 @@ def listen_for_client(cs):
             
 
 c = socket.socket()
-print(f"[*] Connecting to {SERVER_HOST}:{SERVER_PORT}...")
-c.connect((SERVER_HOST, SERVER_PORT))
+print(f"[*] Connecting to {host}:{args.port}...")
+c.connect((host, args.port))
 print("[+] Connected.")
         
 

@@ -2,20 +2,38 @@ import socket
 import random
 from threading import Thread
 import os
+import argparse
 
 
 parser = argparse.ArgumentParser(
-    description="HiveMind, python bot net using sockets"
+    description="HiveMind, python bot net using sockets."
 )
 
-parser.add_argument("host", nargs="?", help="Address of the Server")
+parser.add_argument("host", nargs="?", help="Address of the Server.")
 
 parser.add_argument(
-    "-p", "--port", default=5000, help="Port the Server is running on", type=int
+    "-p", "--port", default=5000, help="Port the Server is running on.", type=int
 )
 
+parser.add_argument(
+    "-b",
+    dest="bot",
+    default="vers",
+    type=str,
+    help="The bot number this is.",
+)
 
 args = parser.parse_args()
+
+
+if len(sys.argv) <= 1:
+    parser.print_help()
+    sys.exit(1)
+
+if not args.host:
+    print("Host required! \n")
+    parser.print_help()
+    sys.exit(1)
 
 
 s = socket.socket()
@@ -23,7 +41,7 @@ s.connect((args.host, args.port))
 print("[+] Connected.")
 
 
-bot_number = input(f"What bot number is this?: ")
+bot_number = args.bot
 
 
 def listen_for_messages():

@@ -2,6 +2,7 @@ import socket
 import random
 from threading import Thread
 import argparse
+import sys
 
 
 parser = argparse.ArgumentParser(
@@ -16,6 +17,16 @@ parser.add_argument(
 
 
 args = parser.parse_args()
+
+
+if len(sys.argv) <= 1:
+    parser.print_help()
+    sys.exit(1)
+
+if not args.host:
+    print("Host required! \n")
+    parser.print_help()
+    sys.exit(1)
 
 
 s = socket.socket()
