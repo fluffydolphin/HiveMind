@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser(
 parser.add_argument("host", nargs="?", help="Address of the Server")
 
 parser.add_argument(
-    "-p", "--port", default=5000, help="Port of the Server", type=int
+    "-p", "--port", default=5000, help="Port of the Server, default 5000", type=int
 )
 
 

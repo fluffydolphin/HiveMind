@@ -18,6 +18,7 @@ parser.add_argument(
 
 parser.add_argument(
     "-b",
+    "--bot",
     dest="bot",
     default="vers",
     type=str,
