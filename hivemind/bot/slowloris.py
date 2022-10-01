@@ -63,7 +63,6 @@ parser.add_argument(
 parser.add_argument(
     "--duration",
     dest="duration",
-    default=10,
     type=int,
     help="Duration of attack.",
 )
