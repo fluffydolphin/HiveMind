@@ -55,6 +55,19 @@ Cloning using git.
 That's all it takes to install and run HiveMind.
 
 ## Commands and Configuration for HiveMind
+It is possible to modify the behaviour of HiveMind with cli
+arguments. In order to get an up-to-date help document, just run
+`client -h`.
+
+you can change the server ip on the client and bot but not on the server, the default host ip on the server is 0.0.0.0 (localhost).
+
+* -p, --port
+* * Port of the Server, default 5000 
+* -b, --bot
+* * The bot number this is (this argument is only for the bots)
+
+
+These commands are for after you have started HiveMind and adjusted the behaviour
 
 * !help!
 * * Shows you this
@@ -67,9 +80,9 @@ That's all it takes to install and run HiveMind.
 
 
 ## Configuration options for Slowloris
-It is possible to modify the behaviour of slowloris with command-line
+It is possible to modify the behaviour of slowloris with cli
 arguments. In order to get an up-to-date help document, just run
-`slowloris -h`.
+`slowloris -h`(if you run any of these arguments that give a direct output to the cli then they will not be displayed in the client, but they are still outputting on the bots).
 
 * -p, --port
 * * Port of webserver, usually 80
