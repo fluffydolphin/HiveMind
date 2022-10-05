@@ -69,7 +69,7 @@ while True:
         s.send(sin.encode())
         s.close()
         sys.exit()
-    else: print("\n connected \n")
+    else: print("\nconnected\n")
     to_send =  input("You: ")
     to_send = f"{to_send}"
     if '!help!' in to_send:
