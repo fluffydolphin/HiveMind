@@ -76,9 +76,7 @@ These commands are for after you have started HiveMind and adjusted the behaviou
 * !slowloris!
 * * Shows you the help command for Slowloris https://github.com/fluffydolphin/HiveMind/blob/master/README.md#configuration-options-for-slowloris
 * !quit!
-* * This is used for quiting either the client or the bot (you have to use this or else you will get a broken pipe error)
-
-* When you run bot.py it will ask you what number bot you want this to be eg 1, 10 or 12 and the full bot name will be bot- the number you selected eg bot-2, bot-8 or bot-17. 
+* * This is used for quiting either the client or the bot (you have to use this or else you will get a broken pipe error) 
 
 
 ## Configuration options for Slowloris
