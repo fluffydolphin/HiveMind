@@ -34,8 +34,8 @@ def listen_for_client(cs):
         try:
             msg = cs.recv(1024).decode()
         except Exception as e:
-            print(f"[!] Error: {e}")
-            client_sockets.remove(cs)
+            client_socket.close()
+            client_sockets.remove(client_socket)
         else:
             msg = msg.replace(separator_token, ": ")
         for client_socket in client_sockets:
@@ -48,18 +48,13 @@ c.connect((host, args.port))
 print("[+] Connected.")
         
 
-def listen_for_messages():
+def listen_for_messages(cs):
     while True:
         message = c.recv(1024).decode()
         if "!quit!" in message:
             client_socket.close()
             client_sockets.remove(client_socket)
         print("\n" + message)
-
-
-l = Thread(target=listen_for_messages)
-l.daemon = True
-l.start()
     
 
 while True:
@@ -69,6 +64,9 @@ while True:
     t = Thread(target=listen_for_client, args=(client_socket,))
     t.daemon = True
     t.start()
+    l = Thread(target=listen_for_messages, args=(client_socket,))
+    l.daemon = True
+    l.start()
 
 
 for cs in client_sockets:
