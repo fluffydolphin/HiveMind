@@ -63,7 +63,7 @@ while True:
     if password != 'Hoey4639!':
         print('Password is incorrect, restart and try again')
         break
-    to_send =  input("HiveMind Command: ")
+    to_send =  input()
     to_send = f"{to_send}"
     if '!help!' in to_send:
         print("""
