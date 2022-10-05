@@ -64,7 +64,7 @@ while True:
  |_|  |_|_| \_/ \___|_|  |_|_|_| |_|\__,_|
   HiveMind v 1.0 | fluffydolphin
     """)
-    to_send =  input()
+    to_send =  input("HiveMind Command: ")
     to_send = f"{to_send}"
     if '!help!' in to_send:
         print("""
