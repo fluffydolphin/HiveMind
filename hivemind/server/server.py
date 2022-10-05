@@ -36,6 +36,8 @@ def listen_for_client(cs):
         except Exception as e:
             print(f"[!] Error: {e}")
             client_sockets.remove(cs)
+            client_socket.close()
+            client_sockets.remove(client_socket)
         else:
             msg = msg.replace(separator_token, ": ")
         for client_socket in client_sockets:
