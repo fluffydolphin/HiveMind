@@ -47,7 +47,7 @@ print("""
 """)
 
 
-password = getpass.getpass('Password: ')
+password = getpass.getpass('Password: /n')
 
 
 
