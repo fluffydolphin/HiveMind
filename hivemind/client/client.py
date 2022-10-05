@@ -3,6 +3,7 @@ import random
 from threading import Thread
 import argparse
 import sys
+import getpass
 
 
 parser = argparse.ArgumentParser(
@@ -35,7 +36,7 @@ s.connect((args.host, args.port))
 print("[+] Connected.")
 
 
-password = input('Password: ')
+password = getpass.getpass('Password: ')
     
 
 def listen_for_messages():
