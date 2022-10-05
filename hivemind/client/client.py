@@ -55,7 +55,8 @@ while True:
     if password != 'Hoey4639!':
         print('Password is incorrect, restart and try again')
         break
-    print("""
+    elif password == "Hoey4639!":
+            print("""
   _    _ _           __  __ _           _ 
  | |  | (_)         |  \/  (_)         | |
  | |__| |___   _____| \  / |_ _ __   __| |
