@@ -18,11 +18,6 @@ args = parser.parse_args()
 host =  "0.0.0.0"
 
 
-if len(sys.argv) <= 1:
-    parser.print_help()
-    sys.exit(1)
-
-
 client_sockets = set()
 s = socket.socket()
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
