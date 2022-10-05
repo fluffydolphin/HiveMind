@@ -34,20 +34,7 @@ s = socket.socket()
 print(f"[*] Connecting to {args.host}:{args.port}...")
 s.connect((args.host, args.port))
 print("[+] Connected.")
-
-
-password = getpass.getpass('Password: ')
     
-
-def listen_for_messages():
-    while True:
-        message = s.recv(1024).decode()
-        print("\n" + message)
-
-
-t = Thread(target=listen_for_messages)
-t.daemon = True
-t.start()
 
 print("""
   _    _ _           __  __ _           _ 
@@ -59,10 +46,29 @@ print("""
   HiveMind v 1.0 | fluffydolphin
 """)
 
+
+password = getpass.getpass('Password: ')
+
+
+
+def listen_for_messages():
+    while True:
+        message = s.recv(1024).decode()
+        print("\n" + message)
+
+
+t = Thread(target=listen_for_messages)
+t.daemon = True
+t.start()
+
+
 while True:
     if password != 'Hoey4639!':
         print('Password is incorrect, restart and try again')
-        break
+        sin = "!quit!"
+        s.send(sin.encode())
+        s.close()
+        sys.exit()
     to_send =  input()
     to_send = f"{to_send}"
     if '!help!' in to_send:
