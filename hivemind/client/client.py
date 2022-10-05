@@ -55,6 +55,15 @@ while True:
     if password != 'Hoey4639!':
         print('Password is incorrect, restart and try again')
         break
+    print("""
+  _    _ _           __  __ _           _ 
+ | |  | (_)         |  \/  (_)         | |
+ | |__| |___   _____| \  / |_ _ __   __| |
+ |  __  | \ \ / / _ \ |\/| | | '_ \ / _` |
+ | |  | | |\ V /  __/ |  | | | | | | (_| |
+ |_|  |_|_| \_/ \___|_|  |_|_|_| |_|\__,_|
+  HiveMind v 1.0 | fluffydolphin
+    """)
     to_send =  input()
     to_send = f"{to_send}"
     if '!help!' in to_send:
