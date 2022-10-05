@@ -64,12 +64,12 @@ t.start()
 
 while True:
     if password != 'Hoey4639!':
-        print('Password is incorrect, restart and try again')
+        print('Password is incorrect, restart and try again \n')
         sin = "!quit!"
         s.send(sin.encode())
         s.close()
         sys.exit()
-    else: print("connected")
+    else: print("connected \n")
     to_send =  input()
     to_send = f"{to_send}"
     if '!help!' in to_send:
