@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser(
 parser.add_argument("host", nargs="?", help="Address of the Server")
 
 parser.add_argument(
-    "-p", "--port", default=5000, help="Port of the Server, default 5000", type=int
+    "-p", "--port", default=420, help="Port of the Server, default 5000", type=int
 )
 
 
@@ -55,8 +55,6 @@ while True:
         print('Password is incorrect, restart and try again')
         break
     to_send =  input()
-    if to_send.lower() == 'q':
-        break
     to_send = f"{to_send}"
     if '!help!' in to_send:
         print("""
@@ -94,5 +92,9 @@ optional arguments:
   --duration DURATION   Duration of attack.
 """)
     else: s.send(to_send.encode())
+    if "!quit!" in to_send:
+        s.close()
+        sys.exit()
+
 
 s.close()

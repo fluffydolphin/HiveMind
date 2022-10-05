@@ -10,7 +10,7 @@ parser = argparse.ArgumentParser(
 )
 
 parser.add_argument(
-    "-p", "--port", default=5000, help="Port of the Server", type=int
+    "-p", "--port", default=420, help="Port of the Server", type=int
 )
 
 
@@ -56,6 +56,9 @@ print("[+] Connected.")
 def listen_for_messages():
     while True:
         message = c.recv(1024).decode()
+        if "!quit!" in message:
+            client_socket.close()
+            client_sockets.remove(client_socket)
         print("\n" + message)
 
 

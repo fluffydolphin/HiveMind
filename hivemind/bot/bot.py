@@ -13,7 +13,7 @@ parser = argparse.ArgumentParser(
 parser.add_argument("host", nargs="?", help="Address of the Server.")
 
 parser.add_argument(
-    "-p", "--port", default=5000, help="Port the Server is running on.", type=int
+    "-p", "--port", default=420, help="Port the Server is running on.", type=int
 )
 
 parser.add_argument(
@@ -64,10 +64,11 @@ t.start()
 
 while True:
     to_send =  input()
-    if to_send.lower() == 'q':
-        break
     to_send = f"bot-{bot_number}: {to_send}"
     s.send(to_send.encode())
+    if "!quit!" in to_send:
+        s.close()
+        sys.exit()
 
 
 s.close()
