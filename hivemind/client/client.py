@@ -47,7 +47,7 @@ print("""
 """)
 
 
-password = getpass.getpass('Password: \n')
+password = getpass.getpass('Password: ')
 
 
 
@@ -69,8 +69,8 @@ while True:
         s.send(sin.encode())
         s.close()
         sys.exit()
-    else: print("connected \n")
-    to_send =  input()
+    else: print("\n connected \n")
+    to_send =  input("You: ")
     to_send = f"{to_send}"
     if '!help!' in to_send:
         print("""
