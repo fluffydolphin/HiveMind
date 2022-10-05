@@ -70,7 +70,7 @@ while True:
         s.close()
         sys.exit()
     else: print("\nconnected\n")
-    to_send =  input("You: ")
+    to_send =  input()
     to_send = f"{to_send}"
     if '!help!' in to_send:
         print("""
