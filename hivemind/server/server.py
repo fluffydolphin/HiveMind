@@ -19,7 +19,7 @@ host =  "0.0.0.0"
 name = "server"
 
 
-def listen_for_client(cs):
+def listen_for_client(cs, client_sockets):
     while True:
         try:
             msg = cs.recv(1024).decode()
@@ -44,7 +44,7 @@ while True:
     client_socket, client_address = s.accept()
     print(f"[+] {client_address} connected.") 
     client_sockets.add(client_socket)
-    t = Thread(target=listen_for_client, args=(client_socket,))
+    t = Thread(target=listen_for_client, args=(client_socket, client_sockets))
     t.daemon = True
     t.start()
 
