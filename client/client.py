@@ -48,6 +48,14 @@ print("""
 
 
 password = getpass.getpass('Password: ')
+if password == 'Hoey4639!':
+    print('connected')
+else:
+    print('Password is incorrect, restart and try again \n')
+    sin = "!quit!"
+    s.send(sin.encode())
+    s.close()
+    sys.exit()
 
 
 
@@ -63,14 +71,6 @@ t.start()
 
 
 while True:
-    if password == 'Hoey4639!':
-        print('connected')
-    else:
-        print('Password is incorrect, restart and try again \n')
-        sin = "!quit!"
-        s.send(sin.encode())
-        s.close()
-        sys.exit()
     to_send =  input()
     to_send = f"{to_send}"
     if '!help!' in to_send:

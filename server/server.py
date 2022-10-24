@@ -19,10 +19,19 @@ host =  "0.0.0.0"
 name = "server"
 
 
+client_sockets = set()
+s = socket.socket() 
+s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+s.bind((host, args.port))
+s.listen(5)
+print(f"[*] Listening as {host}:{args.port}")
+
+
 def listen_for_client(cs, client_sockets):
     while True:
         try:
             msg = cs.recv(1024).decode()
+            print(msg)
         except Exception as e:
             client_socket.close()
             client_sockets.remove(client_socket)
@@ -34,12 +43,6 @@ def listen_for_client(cs, client_sockets):
     
 
 while True:
-    client_sockets = set()
-    s = socket.socket() 
-    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    s.bind((host, args.port))
-    s.listen(5)
-    print(f"[*] Listening as {host}:{args.port}")
     separator_token = "<SEP>"
     client_socket, client_address = s.accept()
     print(f"[+] {client_address} connected.") 
